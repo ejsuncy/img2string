@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" width="10" />
+	<div id="preview"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script>
+		$('input').on('change', function(){
+		    var source = $('input').val();
+		    var success = function(data){
+		    	$('#preview').html('<img src="' + data.dataURI + '" />'); 
+		    }
+		   
+		    $.ajax({
+		        type: 'POST',
+		        url: 'http://localhost:3000',
+		        data: source
+		    }).success(success);
+		});
+	</script>
+
+</body>
+</html>

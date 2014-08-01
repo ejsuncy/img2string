@@ -1,0 +1,11 @@
+{
+  "name": "img2string",
+  "version": "0.0.1",
+  "description": "A node server that accepts POST requests containing form data of an image URL and returns the base 64 encoding of that image as a string",
+  "dependencies": {
+    "express": "~4.7.2",
+    "fabric": "~1.4.9",
+    "body-parser": "~1.5.2"
+  },
+  "author": "Dan Bunker"
+}
